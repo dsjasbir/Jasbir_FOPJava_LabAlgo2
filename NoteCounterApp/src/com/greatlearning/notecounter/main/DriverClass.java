@@ -40,7 +40,7 @@ public class DriverClass {
 		
 		if (remainingAmount > 0)
 		{
-			System.out.println("Amount cannot be paid in given denominations!");
+			System.out.println("Amount cannot be paid in give denominations!");
 		}
 		else
 		{
@@ -78,11 +78,11 @@ public class DriverClass {
 			return countNotes(arrDenominations, counter, 0, high - 1, amountToPay);
 		}
 		int mid = (low+high)/2;
-		if(amountToPay < arrDenominations[mid])
+		if(amountToPay <= arrDenominations[mid])
 		{
 			return countNotes(arrDenominations, counter, 0, mid - 1, amountToPay);
 		}
-		return countNotes(arrDenominations, counter, 0, high-1, amountToPay);
+		return countNotes(arrDenominations, counter, 0, high - 1, amountToPay);
 	}
 	
 }
